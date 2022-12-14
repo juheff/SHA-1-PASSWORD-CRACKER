@@ -18,7 +18,7 @@ def crack_sha1_hash(hash, use_salts=False):
                             (password +
                              salt).encode("UTF-8").strip()).hexdigest()
 
-                        if prepend_digest == hash or append_digest == hash:
+                        if hash in (prepend_digest, append_digest):
                             salts.close()
                             passwords.close()
 
