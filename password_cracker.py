@@ -6,7 +6,7 @@ def crack_sha1_hash(hash, use_salts=False):
         password_found = False
         passwords = open("top-10000-passwords.txt", "r")
         for password in passwords:
-            if use_salts == True:
+            if use_salts is True:
                 with open("known-salts.txt", "r") as salts:
                     for salt in salts:
                         salt = salt.splitlines()[0]
@@ -35,7 +35,7 @@ def crack_sha1_hash(hash, use_salts=False):
                     password_found = True
                     return password
 
-        if password_found == False:
+        if password_found is False:
             passwords.close()
             return "PASSWORD NOT IN DATABASE"
 
