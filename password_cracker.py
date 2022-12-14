@@ -41,4 +41,4 @@ def crack_sha1_hash(hash, use_salts=False):
 
     except FileNotFoundError:
         print("Error: file not found")
-        quit()
+      sys.exit(1)
